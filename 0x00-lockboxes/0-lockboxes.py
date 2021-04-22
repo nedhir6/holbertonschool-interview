@@ -11,6 +11,4 @@ def canUnlockAll(boxes):
         for j in boxes[i]:
             if j < len(boxes) and j != i and j not in tmp:
                 tmp.append(j)
-    if len(tmp) == len(boxes):
-        return True
-    return False
+    return len(tmp) == len(boxes)
