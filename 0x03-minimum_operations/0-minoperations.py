@@ -3,9 +3,6 @@
 
 
 def minOperations(n):
-    """Given a number n, this is  a method that calculates
-    the fewest number of operations needed to result
-    in exactly n H characters in the file"""
     if not isinstance(n, int):
         return 0
     a = 0
@@ -16,5 +13,3 @@ def minOperations(n):
         else:
             return int(a + n)
     return a
-
-
