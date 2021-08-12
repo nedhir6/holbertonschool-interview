@@ -6,10 +6,7 @@ def minOperations(n):
     if not isinstance(n, int):
         return 0
     a = 0
-    while n > 1:
-        if n % 2 == 0:
-            n = n / 2
-            a = a + 2
-        else:
-            return int(a + n)
-    return a
+    for i in range(1, n+1):
+        if n % i == 0:
+            a += 1
+    return a + 1
