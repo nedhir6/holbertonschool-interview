@@ -13,6 +13,8 @@ int is_palindrome(listint_t **head)
 const listint_t *list = *head, *h = *head;
 int *arr, size_list = 0, n = 0;
 list = h;
+if (list == NULL)
+return (1);
 while (list != NULL)
 {
 list = list->next;
