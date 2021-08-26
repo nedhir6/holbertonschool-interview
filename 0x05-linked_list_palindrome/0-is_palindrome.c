@@ -10,7 +10,7 @@
  */
 int is_palindrome(listint_t **head)
 {
-const listint_t *list, *h = *head;
+const listint_t *list = *head, *h = *head;
 int *arr, size_list = 0, n = 0;
 list = h;
 while (list != NULL)
@@ -19,7 +19,8 @@ list = list->next;
 size_list++;
 }
 arr = malloc(size_list *sizeof(int));
-list = h;
+if (!arr)
+return (0);
 while (list != NULL)
 {
 arr[n] = list->n;
@@ -28,8 +29,8 @@ n++;
 }
 for (n = 0; n <= size_list / 2 && size_list != 0; n++)
 {
-if (arr[n] != arr[size_list - n])
-return (1);
-}
+if (arr[n] != arr[size_list - n - 1])
 return (0);
+}
+return (1);
 }
