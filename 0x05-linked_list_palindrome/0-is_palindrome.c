@@ -27,7 +27,7 @@ arr[n] = list->n;
 list = list->next;
 n++;
 }
-for (n = 0; n <= size_list / 2 && size_list != 0; n++)
+for (n = 0; n <= (size_list / 2); n++)
 {
 if (arr[n] != arr[size_list - n - 1])
 return (0);
