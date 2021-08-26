@@ -32,7 +32,9 @@ n++;
 for (n = 0; n <= (size_list / 2); n++)
 {
 if (arr[n] != arr[size_list - n - 1])
+free(arr);
 return (0);
 }
+free(arr);
 return (1);
 }
