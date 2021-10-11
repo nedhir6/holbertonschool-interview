@@ -7,7 +7,7 @@ def validUTF8(data):
     represents a valid UTF-8 encoding
     data: list of integers"""
     try:
-        bytes([i for i in data]).decode('utf-8')
+        bytes([i & 255 for i in data]).decode('utf-8')
         return True
-    except Exception:
+    except UnicodeDecodeError:
         return False
