@@ -16,18 +16,16 @@ if __name__ == '__main__':
         print("N must be at least 4")
         exit(1)
 
-
     def solve(n, row=0, Queens=[]):
         """solve"""
         if row < n:
             for col in range(n):
                 if is_safe(Queens, row, col):
                     Queens.append([row, col])
-                    solve(n, row+1, Queens)
+                    solve(n, row + 1, Queens)
                     Queens.remove([row, col])
         else:
             print(Queens)
-
 
     def is_safe(queens, row, col):
         """check if the queen can be placed on row, col"""
