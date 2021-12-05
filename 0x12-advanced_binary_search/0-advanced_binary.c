@@ -38,5 +38,5 @@ return (a);
 else if (array[a] < value)
 min = a + 1;
 else
-max = a;}
-return (-1);}
+max = a; }
+return (-1); }
