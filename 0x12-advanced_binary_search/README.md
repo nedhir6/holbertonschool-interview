@@ -1,0 +1,2 @@
+## Advanced Binary Search
+basic binary search does not necessarily return the index of the first value in the array (if this value appears more than once in the array). In this exercise, I solved this problem.
