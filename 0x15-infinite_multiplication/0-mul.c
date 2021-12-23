@@ -1,5 +1,4 @@
 #include <stdlib.h>
-#include <stdio.h>
 #include "lib.h"
 /**
  * _strlen - lenght of a string.
@@ -13,7 +12,6 @@ for (i = 0; s[i] != '\0'; i++)
 {}
 return  (i);
 }
-
 /**
  * main - a program that multiplies two numbers.
  *@argc: argc
