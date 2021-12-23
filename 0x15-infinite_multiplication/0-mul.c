@@ -13,6 +13,20 @@ for (i = 0; s[i] != '\0'; i++)
 return  (i);
 }
 /**
+ * error - prints error
+ */
+void error(void)
+{
+int i = 0;
+char s[] = "Error";
+while (i < 5)
+{_putchar(s[i]);
+i++; }
+_putchar('\n');
+exit(98);
+}
+
+/**
  * main - a program that multiplies two numbers.
  *@argc: argc
  *@argv: argv
@@ -22,14 +36,9 @@ int main(int argc, char *argv[])
 {
 int lenA, lenB, i, j, tmp;
 int *a, *b, *mul;
-char s[] = "Error", *s1, *s2;
+char *s1, *s2;
 if (argc != 3)
-{
-while (i < 5)
-{_putchar(s[i]);
-i++; }
-_putchar('\n');
-exit(98); }
+error();
 if (argv[1] == 0 || argv[2] == 0)
 {_putchar('0');
 return (0); }
@@ -45,9 +54,13 @@ s1[i] = argv[1][i];
 for (i = 0; i < lenB; i++)
 s2[i] = argv[2][i];
 for (i = lenA - 1, j = 0; i >= 0; i--, j++)
-a[j] = s1[i] - '0';
+{a[j] = s1[i] - '0';
+if (a[j] < 0 || a[j] > 9)
+error(); }
 for (i = lenB - 1, j = 0; i >= 0; i--, j++)
-b[j] = s2[i] - '0';
+{b[j] = s2[i] - '0';
+if (b[j] < 0 || b[j] > 9)
+error(); }
 for (i = 0; i < lenB; i++)
 {
 for (j = 0; j < lenA; j++)
