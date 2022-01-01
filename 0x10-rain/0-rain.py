@@ -5,13 +5,10 @@
 def rain(walls):
     """ walls: a list of non-negative integers"""
     retained = 0
-    for i in range(len(walls) - 2):
+    for i in range(len(walls) - 1):
         if walls[i] > walls[i+1]:
-            for j in range(i, len(walls) - 1):
-                if walls[j] > walls[i]:
-                    left = walls[j]
+            for j in range(i + 1, len(walls)):
+                if walls[j] > walls[i+1]:
+                    retained += (j - i - 1) * min(walls[i], walls[j])
                     break
-            if left:
-                retained += min(walls[i], left)
-
     return retained
