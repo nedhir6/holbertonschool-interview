@@ -12,17 +12,21 @@ if (list == 0)
 return (NULL);
 actual = list;
 while (actual)
-{ if (actual->express == NULL)
+{
+if (actual->express == NULL)
 { n = actual->express;
 for (tmp = list; tmp; tmp = tmp->next)
-{ if (tmp->next == NULL)
-{ printf("Value found between indexes [%lu] and [%lu]\n", actual->index, tmp->index);
+{
+if (tmp->next == NULL)
+{ printf("Value found between indexes [%lu] and [%lu]\n",
+actual->index, tmp->index);
 break; }}
 break; }
 if (actual->express->n >= value)
 { n = actual->express;
 printf("Value checked at index [%lu] = [%d]\n", n->index, n->n);
-printf("Value found between indexes [%lu] and [%lu]\n", actual->index, n->index);
+printf("Value found between indexes [%lu] and [%lu]\n",
+actual->index, n->index);
 break; }
 actual = actual->express;
 printf("Value checked at index [%lu] = [%d]\n", actual->index, actual->n); }
