@@ -4,6 +4,7 @@ function that determines the fewest number of coins needed to meet
 a given amount
 """
 
+
 def makeChange(coins, total):
     """ coins: list of the values of the coins in your possession
         total: integer representing the amount to meet"""
@@ -19,6 +20,6 @@ def makeChange(coins, total):
     while coins != []:
         total = total % coins[-1]
         coins.pop()
-    if total !=0:
+    if total != 0:
         return -1
     return len(answer)
